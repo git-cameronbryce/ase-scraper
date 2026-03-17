@@ -13,6 +13,7 @@ async def fetch_players(token: str, guild_id: str, server_id: str):
 
   body = resp.json()
   players = body.get("data", {}).get("players", [])
+  
   if not players:
     return
 

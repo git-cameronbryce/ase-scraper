@@ -4,8 +4,6 @@ async def upsert(results, guild_id):
   batch = db.batch()
 
   for result in results:
-    if result is None:
-      continue
 
     game_specific = result.get("game_specific") or {}
 
